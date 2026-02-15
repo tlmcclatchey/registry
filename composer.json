@@ -1,0 +1,31 @@
+{
+  "name": "tlmcclatchey/registry",
+  "description": "A tiny, DI-friendly in-memory registry with per-key locks and a global freeze switch.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0",
+    "friendsofphp/php-cs-fixer": "^3.50",
+    "phpstan/phpstan": "^1.11",
+    "phpro/grumphp": "^2.19"
+  },
+  "autoload": {
+    "psr-4": {
+      "TLMcClatchey\\Registry\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TLMcClatchey\\RegistryTests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "stan": "phpstan analyse",
+    "cs:fix": "php-cs-fixer fix",
+    "cs:check": "php-cs-fixer fix --dry-run --diff"
+  }
+}

@@ -1,0 +1,18 @@
+parameters:
+  level: 8
+  paths:
+    - src
+    - tests
+
+  tmpDir: .phpstan-cache
+
+  checkMissingIterableValueType: true
+  checkGenericClassInNonGenericObjectType: true
+  reportUnmatchedIgnoredErrors: true
+
+  # Helpful for libraries
+  treatPhpDocTypesAsCertain: false
+
+  # PHPUnit test helper types
+  bootstrapFiles:
+    - vendor/autoload.php
