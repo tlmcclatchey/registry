@@ -29,7 +29,7 @@ Requires **PHP 8.4+**.
 ## Quick Start
 
 ```php
-use TLMCClatchey\Registry\MemoryRegistry;
+use TLMcClatchey\Registry\MemoryRegistry;
 
 $registry = new MemoryRegistry();
 
@@ -105,7 +105,7 @@ RegistryLocks::READ_MODIFY
 Example:
 
 ```php
-use TLMCClatchey\Registry\RegistryLocks;
+use TLMcClatchey\Registry\RegistryLocks;
 
 $registry->define('config', lock: RegistryLocks::READONLY, array: true);
 

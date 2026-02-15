@@ -116,7 +116,7 @@ interface RegistryInterface
      * @param string $subkey Array key.
      * @param int|string|bool|float|null $value Value to assign.
      *
-     * @throws \TLMCClatchey\Registry\RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
+     * @throws RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
      */
     public function assign(string $key, string $subkey, int|string|bool|float|null $value): RegistryInterface;
 
@@ -128,7 +128,7 @@ interface RegistryInterface
      * @param string $key Registry key that must reference an array.
      * @param string $subkey Array key to remove.
      *
-     * @throws \TLMCClatchey\Registry\RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
+     * @throws RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
      */
     public function unassign(string $key, string $subkey): RegistryInterface;
 
@@ -138,7 +138,7 @@ interface RegistryInterface
      * @param string $key Registry key that must reference an array.
      * @param int|string|bool|float|null $value Value to prepend.
      *
-     * @throws \TLMCClatchey\Registry\RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
+     * @throws RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
      */
     public function prepend(string $key, int|string|bool|float|null $value): RegistryInterface;
 
@@ -148,7 +148,7 @@ interface RegistryInterface
      * @param string $key Registry key that must reference an array.
      * @param int|string|bool|float|null $value Value to append.
      *
-     * @throws \TLMCClatchey\Registry\RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
+     * @throws RegistryException If registry is frozen, key is not defined, value is not an array, or key is locked.
      */
     public function append(string $key, int|string|bool|float|null $value): RegistryInterface;
 }

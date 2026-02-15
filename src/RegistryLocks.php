@@ -61,6 +61,7 @@ final class RegistryLocks
 
     /**
      * Preset that allows list/map mutations, but prevents overwriting or clearing the whole key.
+     * @noinspection PhpUnused
      */
     public const int READ_MODIFY =
         self::NO_SET |
@@ -76,6 +77,7 @@ final class RegistryLocks
 
     /**
      * Global frozen flag. When true, all mutation is prohibited.
+     * @noinspection PhpGetterAndSetterCanBeReplacedWithPropertyHooksInspection
      */
     private bool $frozen = false;
 
